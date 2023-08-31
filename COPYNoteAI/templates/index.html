@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Landing Page - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.16.0/font/bootstrap-icons.css" rel="stylesheet">
+      
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+    </head>
+    <body>
+        <!-- Navigation-->
+     
+   
+     
+<header>
+  <nav class="navbar navbar-expand-lg" style="background: black;">
+  <div class="container"> 
+    <a class="navbar-brand" href="#">
+      <img src="static/assets/img/logo.png" alt="Logo" width="100">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item active">
+          <a class="nav-link" style="color: #983b9f;" href="/">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" style="color: #983b9f;" href="/aboutme.html" >About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: #983b9f;" href="/noteai.html">Note AI</a>
+        </li>
+         <li class="nav-item active">
+          <a class="nav-link" style="color: #983b9f;" href="/model.html">Models</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+</header>
+      <!-- Masthead-->
+        <!-- Icons Grid-->
+        <!-- gonna need a logo on this page--> 
+  
+ 
+      
+      <div class="jumbotron" style = "background-color: black; color: white; text-align: center">            <img src="static/assets/img/logo2.png" alt="Logo" width="400" height="400" style = "margin-top: -40px">
+  <h1 style="font-size: 1.5rem;" class="lead typing-text"> </h1>
+  <hr class="my-4">
+
+  <p>When we concentrate on reading, we frequently forget the importance of <strong style="color: orange;">notetaking and struggle with identifying things worth jotting down.</strong> Furthermore, many of us lack the motivation to take notes that are accurate and concise. <strong style="color: orange;">This is where NoteAI comes in.</strong></p>
+  
+    <a class="btn btn-primary btn-lg" href="/noteai.html" role="button">Try NoteAI</a>
+  </p>
+        <script>
+    const t = "Notetaking made easy.";
+    const typingSpeed = 150;
+
+    let char = 0;
+    const typingElement = document.querySelector(".typing-text");
+    typingElement.textContent = ""; 
+
+    const typeInterval = setInterval(() => {
+      typingElement.textContent += t[char];
+      char++;
+
+      if (char >= t.length) {
+        clearInterval(typeInterval);
+      }
+    }, typingSpeed);
+  </script>
+<header>
+<div class="row" style="margin-top: 250px;">
+  <div class="col-sm-6">
+    <div class="card" style="background-color: black; color: white;">
+      <div class="card-body">
+        <img src="static/assets/img/Screen Shot 2023-08-28 at 2.16.29 PM.png" width="100" height="100">
+        <h5 class="card-title" >Easy Use</h5>
+        <p class="card-text">Create study materials and notes based on <strong style="color: orange;">your textbooks and files.</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="background-color: black; color: white;">
+      <div class="card-body">
+        <img src="static/assets/img/Screen Shot 2023-08-28 at 2.14.04 PM.png" width="100" height="100">
+        <h5 class="card-title">Speed Up Daily Tasks</h5>
+        <p class="card-text">NoteAI will make your workflow <strong style="color: orange;">faster and more efficient.</strong></p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+  <div class="overlay"></div>
+
+  <!-- The HTML5 video element that will create the background video on the header -->
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+  </video>
+
+  <!-- The header content -->
+  <div class="container h-100" style="margin-top: 250px;">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h3 class="display-3">Learn More</h3>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Page section example for content below the video header -->
+<section class="my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <p>Put video transcript/desc here once we have it</p>
+        <p class="mb-0">
+          Created by <a href="https://final-project-scaffold-2023-summer-nlp-11.2023-summer-nlp.repl.co/aboutme.html">the Cozy Cornbreads</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+  <style> 
+    .animated-gradient {
+    background: linear-gradient(45deg, #8d3791, #F69222); 
+    -webkit-background-clip: text; 
+    background-clip: text;  
+    color:transparent; 
+    animation: animations 5s infinite; 
+    background-size: 500% 500%
+    }
+   @keyframes animations {
+      0% {
+        background-position: 0 50%
+      }
+
+      50% {
+        background-position: 50% 100%
+      }
+
+      100% {
+        background-position: 0% 50%
+      } 
+    }
+  </style>
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.16.0/font/bootstrap-icons.css" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="noteai.css" rel="stylesheet" type="text/css" />
+</head>
+ 
+  <nav class="navbar navbar-expand-lg" style="background: black;">
+  <div class="container"> 
+    <a class="navbar-brand" href="#">
+      <img src="static/assets/img/logo.png" alt="Logo" width="100">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item active">
+          <a class="nav-link" style="color: #983b9f;" href="/">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" style="color: #983b9f;" href="/aboutme.html" >About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: #983b9f;" href="/noteai.html">Note AI</a>
+        </li>
+         <li class="nav-item active">
+          <a class="nav-link" style="color: #983b9f;" href="/model.html">Models</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<body>
+  
+  <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+    header{
+  margin-right:10px;
+    margin-left: 10px;}
+    </style>
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" 
+position="bottom-right"></script>
+
+<div class = 'container'>  
+  <h1 style = 'text-align: center; margin: 20px;' class = 'animated-gradient'>HuggingFace Models</h1>
+  <div class = 'row' >  
+    <div class = 'col-md-6' > 
+        <p style = 'text-align: center; border: 2px solid white; border-radius: 20px; padding: 20px; margin: 20px;'>NoteAI uses a <a   href="https://huggingface.co/datasets/ChristophSchuhmann/gutenberg-wiki-arxiv-pubmed-soda-summaries-top50percent">Hugging Face Summarization Dataset</a>
+                          which was created from the top 50% of wikipedia, arxiv,     pubmed, etc. </p>
+          
+      <p style = 'text-align: center; border: 2px solid white; border-radius: 20px; padding: 20px; margin: 20px;'> Note: Why T5? It's an encoder-decoder model, which means it works perfect for our task of summarization.</p>
+    </div> 
+
+    
+    <div class col-md-6 style = "text-align: center; border: 2px solid white; border-radius: 20px; padding: 20px; margin: 20px;">   
+      
+  
+                      
+
+                      <a href="https://huggingface.co/Nehu/Flan">Finetuned Flan-T5-Small</a>
+                      <ul>
+                        <li>60.5 M params</li>
+                        <li>Train Loss: 1.1764</li>
+                        <li>Validation Loss: 0.9237</li>
+                        <li>Encode / Decode Model so very efficient with few params</li>
+                      </ul>
+                      <a href="https://huggingface.co/Michael-Vptn/text-summarization-t5-base">Finetuned Flan-T5-Base</a>
+                      <ul>
+                        <li>248 M params</li>
+                        <li>Train Loss: 1.1621</li>
+                        <li>Validation Loss: 0.8490</li>
+                       </ul>
+
+                      </p>
+         
+  </div>
+                
+                
+  
+
+
+</div>
+  </header>
+</body>
+
+</html>

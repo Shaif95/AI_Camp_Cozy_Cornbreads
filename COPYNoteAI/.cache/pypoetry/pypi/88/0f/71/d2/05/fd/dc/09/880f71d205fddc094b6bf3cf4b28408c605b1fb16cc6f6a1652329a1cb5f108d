@@ -1,0 +1,1 @@
+9999999999{"name": "pdfplumber", "version": "0.10.2", "summary": "Plumb a PDF for detailed information about each char, rectangle, and line.", "platform": null, "requires_dist": ["pdfminer.six (==20221105)", "Pillow (>=9.1)", "pypdfium2 (>=4.18.0)"], "requires_python": ">=3.8", "files": [], "_cache_version": "1.0.0"}

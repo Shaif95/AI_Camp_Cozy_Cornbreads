@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Try NoteAI</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="static/css/noteai.css" rel="stylesheet" />
+    </head> <!-- define page info + stylesheet as noteai.css -->
+    <body>  
+  <nav class="navbar navbar-expand-lg" style="background: black;"> 
+  <div class="container"> 
+    <a class="navbar-brand" href="/">
+      <img src="static/assets/img/logo.png" alt="Logo" width="100">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item active">
+          <a class="nav-link" style="color: #983b9f;" href="/">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" style="color: #983b9f"; href="/aboutme.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: #983b9f"; href="/noteai.html">Note AI</a>
+        </li>
+        </li>
+         <li class="nav-item active">
+          <a class="nav-link" style="color: #983b9f;" href="/model.html">Models</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> <!-- navbar : links + logo. This should be the same as all other pages -->
+        <header class="masthead">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-white">
+                            <!-- Page heading-->
+                            <h1 class="mb-5">Try Note AI Today!
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header> <!-- Masthead-->
+
+      <section class="showcase">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-lg-6 order-lg-2 text-white showcase-text">
+                  <h2>Input Text:</h2>
+                        <p>{{ input_text[:250] }}...</p>
+                  <h2>Output Text:</h2>
+                  {% if output_text %}
+                    <div><p>{{ output_text }}</p></div>
+                  {% else %}
+                    <div><p>...</p></div>
+                  {% endif %}
+                </div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2 class="form_h2">Try It For Yourself!</h2>
+                        <p class="lead mb-0 forms-container">
+                          <form method="post" class="summarize-form" action="{{ url_for('noteai') }}">
+                            <textarea placeholder="Please note, this AI has only been tested only to ~4000 characters." name="input_text" rows="4" cols="30" class="summarize-form">{{ input_text }}</textarea>
+                            <button type="submit" class="summarize-button">Summarize</button>
+                        </form> <!-- Form takes in input text and sends it to the api which is
+                                                then displayed in output_text -->
+                      <div class="pdf_input">
+                        <form action="/upload" method="post" enctype="multipart/form-data" class="pdf-upload-form">
+                            <label for="pdf_file" class="upload-label">Or Upload a PDF:</label>
+                            <input type="file" name="pdf_file" id="pdf_file" class="pdf-file-input">
+                            <input type="submit" value="Upload" class="upload-button">
+                        </form> <!-- pdf upload -->
+                        <a href="{{ url_for('export_to_pdf') }}" class="export_pdf-button">Export To PDF</a>
+                      </div>
+                    </div>
+                </div>
+              
+        </section> <!-- showcase: contains API along with information about models, datasets, how it works, etc -->
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html> 

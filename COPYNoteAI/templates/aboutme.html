@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.16.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+    .animated-gradient {
+    background: linear-gradient(45deg, #8d3791, #F69222); 
+    -webkit-background-clip: text; 
+    background-clip: text;  
+    color:transparent; 
+    animation: animations 5s infinite; 
+    background-size: 500% 500%
+    }
+   @keyframes animations {
+      0% {
+        background-position: 0 50%
+      }
+
+      50% {
+        background-position: 50% 100%
+      }
+
+      100% {
+        background-position: 0% 50%
+      } 
+    }
+  </style>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        .team-members {
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 0px; 
+            justify-content: center; 
+            margin-bottom: 15px;
+            
+            padding: 10px;
+            border-radius: 20px;
+          
+        }
+        .card {
+            flex-basis: 0 0 calc(33.33% - 30px); 
+            flex: basis;r: 1px solid #ccc;
+            padding: 10px; 
+            border-radius: 30px;
+            border: 2px solid white; 
+            margin-right: 10px; 
+            margin-left: 10px; 
+            
+            width: 100%;
+            margin-bottom: 15px;
+        }  
+        
+
+      
+    </style>
+</head>
+<body> 
+  <header>
+  <nav class="navbar navbar-expand-lg" style="background: black;">
+  <div class="container"> 
+    <a class="navbar-brand" href="#">
+      <img src="static/assets/img/logo.png" alt="Logo" width="100">
+    </a>
+    <button class="navbar-toggler" typlogoe="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item active">
+          <a class="nav-link" style="color: #983b9f;" href="/">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" style="color: #983b9f;" href="/aboutme.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: #983b9f;" href="/noteai.html">Note AI</a>
+        </li>
+        </li>
+         <li class="nav-item active">
+          <a class="nav-link" style="color: #983b9f;" href="/model.html">Models</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+  
+<h1 style = 'text-align: center; margin: 20px;' class = 'animated-gradient'>About Us</h1>
+
+<script>
+    const t = "About Us";
+    const typingSpeed = 150;
+
+    let char = 0;
+    const typingElement = document.querySelector(".typing-text");
+    typingElement.textContent = ""; 
+
+    const typeInterval = setInterval(() => {
+      typingElement.textContent += t[char];
+      char++;
+
+      if (char >= t.length) {
+        clearInterval(typeInterval);
+      }
+    }, typingSpeed);
+  </script>
+<div class = 'team-members'>
+  <style>
+    .bg-purple {
+        background-color: transparent;
+    }
+</style>
+
+  <!-- First set of cards -->
+  <div class="card bg-purple text-white mb-3" style="max-width: 18rem;">
+    <div class="card-body">
+    <p class="card-text"><strong>Aaron - Developer</strong></p>
+      <p class="card-text" style = "color : white;"><small>Hello! My name's Aaron and I am a 15 year old programmer from Southern Ontario who helped design NoteAI.</small></p>
+    </div>
+  </div>
+  
+  <div class="card bg-purple text-white mb-3" style="max-width: 18rem;">
+    <div class="card-body">
+      <p class="card-text"><strong>Vincent - Developer</strong></p>
+      <p class="card-text" style = "color : white;"><small>Hey, I'm Vincent. I am 16 years old and am from New York. I love reading and trying new things, whether it be hobbies or food.</small></p>
+    </div>
+  </div>
+
+  
+
+  <div class="card bg-purple text-white mb-3" style="max-width: 18rem;">
+    <div class="card-body" >
+      <p class="card-text"><strong>Neha - Developer</strong></p>
+      <p class="card-text" style = "color : white" ><small>Hey, I'm Neha. I am 15 years old and am from New Jersey. I am going to be a junior in high school. I love coding, reading, cooking, baking, and listening to music. I recently learned how to code using Java; prior to that, I knew Python, CSS, and basic HTML.</small></p>
+    </div>
+  </div>
+</div>
+<div class="team-members">
+ <div class="card bg-purple text-white mb-3" style="max-width: 18rem;">
+    <p class="card-text"><strong>Shuting - Developer</strong></p>
+      <p class="card-text" style = "color : white"><small>Hello! I'm Shuting and I'm currently 15 year old from Boston. I love spending time with my dog, Milo, my family and my friends during my free time! I've been coding for real for about 3 years now, it all started when I wanted to make my own video game.</small></p>
+  </div>
+
+  
+
+
+  <div class="card bg-purple text-white mb-3" style="max-width: 18rem;">>
+     <div class="card-body">
+      <p class="card-text"><strong>Anshi Mehra - Developer</strong></p>
+      <p class="card-text" style = "color : white"><small>Hey! I'm Anshi. I'm 15 years old from New Hampshire. I love creating and listening to music, reading, banana slugs, and coding!</small></p>
+      </div>
+  </div>
+  
+  <div class="card bg-purple text-white mb-3" style="max-width: 18rem;">
+   <div class="card-body">
+      <p class="card-text"><strong>Michael - Developer</strong></p>
+      <p class="card-text" style = "color : white"><small>Hey! Im Michael. I'm 17 years old and located in Calgary AB, Canada. I've been programming and doing web developement for 3 years and am currently working on developing my skills in NLP and machine learning .</small></p>
+    </div>
+  </div>
+</div>
+  
+<div class="team-members d-flex justify-content-center">
+  <div class="card bg-purple text-white mb-3" style="max-width: 40rem;">
+    <div class="card-body text-white">
+      <p class="card-text"><strong>Shaif - Instructor</strong></p>
+      <p class="card-text" style = "color : white"><small>Hello! I'm Shaif, an Instructor at AI Camp and a PhD student at Baylor University.</small></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<p class="card-text"><small class="text-muted">
